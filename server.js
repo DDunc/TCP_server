@@ -17,8 +17,6 @@ var server = tcp.createServer(function(socket) {
             }
         });
     });
-/*take heed, weary reader: this is the test. I've been trying for hours but I can't get chai-http
-or anything else to work, and we ran kinda short on time to cover this.*/
     socket.on('end', function (){
         fs.access("./logs/" + fileList[fileList.length-1], function (err){
             if(err){ //error here would indicate access problem
@@ -34,5 +32,3 @@ or anything else to work, and we ran kinda short on time to cover this.*/
 server.listen(3000, function(){
   console.log("Server is listening");
 });
-
-//var points = require(start the server, open chrome to localhost3000, hit enter a few times)*/
